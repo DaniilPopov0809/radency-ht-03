@@ -5,6 +5,8 @@ const router: express.Router = express.Router();
 
 router.get("/",  ctrlNotes.getAllNotes);
 
+router.get("/stats",  ctrlNotes.getNotesStats);
+
 router.get("/:id", ctrlNotes.getNoteById);
 
 export default router;
