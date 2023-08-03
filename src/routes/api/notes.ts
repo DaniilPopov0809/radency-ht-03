@@ -1,5 +1,8 @@
 import express from "express";
 import  ctrlNotes  from "../../controllers/note";
+import validateBody from "../../middlewares/validateBody";
+import { addNoteSchema } from "../../schemas";
+
 
 const router: express.Router = express.Router();
 
@@ -10,5 +13,7 @@ router.get("/stats",  ctrlNotes.getNotesStats);
 router.get("/:id", ctrlNotes.getNoteById);
 
 router.delete("/:id", ctrlNotes.removeNote);
+
+router.post("/", validateBody(addNoteSchema), ctrlNotes.addNote);
 
 export default router;
