@@ -1,7 +1,4 @@
-interface Error {
-  status: number;
-  message: string;
-}
+import { Error } from "../types";
 
 const HttpError = (status: number, message: string): Error => {
   const error: Error = {
@@ -12,4 +9,3 @@ const HttpError = (status: number, message: string): Error => {
 };
 
 export default HttpError;
-  

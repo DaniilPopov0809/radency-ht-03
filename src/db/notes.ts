@@ -1,13 +1,5 @@
-export interface NoteItem {
-    id: string;
-    title: string;
-    created: string;
-    category: string;
-    content: string;
-    dates: string[];
-    archive: boolean;
-  }
- 
+import { NoteItem } from "../types";
+
  const mockedNotes: NoteItem[] = [
     {
       id: "vperTKBsSa_qi4pesmGNA",
