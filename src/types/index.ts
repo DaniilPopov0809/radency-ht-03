@@ -29,3 +29,5 @@ export interface ReceivedNoteItem  {
   content: string;
   archive: boolean; 
 }
+
+export type UpdateNoteItem = Partial<ReceivedNoteItem>;
