@@ -1,10 +1,9 @@
 export interface NoteItem {
   id: string;
-  title: string;
   created: string;
+  title: string;
   category: string;
   content: string;
-  dates: string[];
   archive: boolean;
 }
 
@@ -18,3 +17,12 @@ export interface NoteItemStat {
   active: number;
   archive: number;
 }
+
+export interface ReceivedNoteItem  {
+  title: string;
+  category: string;
+  content: string;
+  archive: boolean; 
+}
+
+export type UpdateNoteItem = Partial<ReceivedNoteItem>;
