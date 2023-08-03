@@ -1,4 +1,4 @@
-export interface TodoItem {
+export interface NoteItem {
     id: string;
     title: string;
     created: string;
@@ -8,7 +8,7 @@ export interface TodoItem {
     archive: boolean;
   }
  
- const todoListData: TodoItem[] = [
+ const mockedNotes: NoteItem[] = [
     {
       id: "vperTKBsSa_qi4pesmGNA",
       title: "Shopping List",
@@ -74,4 +74,4 @@ export interface TodoItem {
     },
   ];
   
-export default todoListData;
+export default mockedNotes;

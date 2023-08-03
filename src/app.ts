@@ -3,26 +3,22 @@ import morgan from 'morgan';
 import cors from 'cors';
 import { Command } from 'commander';
 
-// import visitorsRouter from './routes/api/visitors';
+import noteRouter from './routes/api/notes';
 // import authRouter from './routes/api/adminAuth';
 
-const app = express();
-const program = new Command();
+const app: express.Express = express();
+const program : Command = new Command();
 
-// Обработка аргументов командной строки с помощью Commander
 program
-//   .option('-p, --port <port>', 'Set the server port', '3000')
   .parse(process.argv);
 
-// const port = parseInt(program.port, 10);
-
-const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
+const formatsLogger: string = app.get('env') === 'development' ? 'dev' : 'short';
 
 app.use(morgan(formatsLogger));
 app.use(cors());
 app.use(express.json());
 
-// app.use('/visitors', visitorsRouter);
+app.use('/notes', noteRouter);
 // app.use('/auth', authRouter);
 
 app.use((_req: Request, res: Response) => {
@@ -38,7 +34,4 @@ app.use((err: CustomError, _req: Request, res: Response, _next: NextFunction): v
   res.status(status).json({ message });
 });
 
-// app.listen(3000, () => {
-//   console.log(`Server running. Use our API on port: 3000`);
-// });
 export default app;
