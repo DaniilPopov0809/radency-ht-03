@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/DaniilPopov0809/radency-ht-03#readme",
   "dependencies": {
+    "@types/dotenv": "^8.2.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.0",
     "commander": "^11.0.0",
