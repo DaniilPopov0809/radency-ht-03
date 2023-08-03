@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node-esm ./src/server.ts",
     "start:dev": "nodemon",
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "startForRender": "node ./src/server.js"
   },
   "repository": {
     "type": "git",
