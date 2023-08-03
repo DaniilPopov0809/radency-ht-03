@@ -1,4 +1,3 @@
-import { ValidationError } from 'joi';
 export interface NoteItem {
   id: string;
   created: string;
