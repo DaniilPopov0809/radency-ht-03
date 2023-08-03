@@ -11,5 +11,5 @@ export = {
   getNotesStats,
   removeNote,
   addNote,
-  updateNote
+  updateNote,
 };

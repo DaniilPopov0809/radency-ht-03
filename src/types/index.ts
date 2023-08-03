@@ -19,10 +19,6 @@ export interface NoteItemStat {
   archive: number;
 }
 
-export interface ValidationSchema {
-  validate(data: any): { error: ValidationError | null; value: any };
-}
-
 export interface ReceivedNoteItem  {
   title: string;
   category: string;

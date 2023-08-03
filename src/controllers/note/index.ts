@@ -6,10 +6,10 @@ import addNote from "./addNote";
 import updateNote from "./updateNote";
 
 export default {
-    getAllNotes,
-    getNoteById,
-    getNotesStats,
-    removeNote,
-    addNote,
-    updateNote
-}
+  getAllNotes,
+  getNoteById,
+  getNotesStats,
+  removeNote,
+  addNote,
+  updateNote,
+};

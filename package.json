@@ -25,17 +25,13 @@
   "homepage": "https://github.com/DaniilPopov0809/radency-ht-03#readme",
   "dependencies": {
     "@types/dotenv": "^8.2.0",
-    "class-transformer": "^0.5.1",
-    "class-validator": "^0.14.0",
     "commander": "^11.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "joi": "^17.9.2",
     "morgan": "^1.10.0",
-    "nanoid": "^3.3.4",
-    "reflect-metadata": "^0.1.13",
-    "routing-controllers": "^0.10.4"
+    "nanoid": "^3.3.4"
   },
   "devDependencies": {
     "@types/commander": "^2.12.2",
