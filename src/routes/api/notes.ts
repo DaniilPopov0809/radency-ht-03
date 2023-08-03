@@ -9,4 +9,6 @@ router.get("/stats",  ctrlNotes.getNotesStats);
 
 router.get("/:id", ctrlNotes.getNoteById);
 
+router.delete("/:id", ctrlNotes.removeNote);
+
 export default router;
