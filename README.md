@@ -57,6 +57,17 @@ The API follows the following format:
 - `GET /notes` - get all notes
 - `GET /notes/stats` - get aggregated data statistics
 
+Data for add note:
+
+```shell
+    {
+        "title": "Shopping",
+        "category": "Task", (one of "Task", "Idea", "Random Thought")
+        "content": "Tomatos",
+        "archive": false
+    }
+ ```
+ Data for update note: any fields from add data.
 ---
 
 ## Tech stack
