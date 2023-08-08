@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      container_name: nodejs_app
+    tty: true
+    working_dir: /src/app
+    environment:
+      - PORT=3000
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=radency
+      - DATABASE_USER=radency
+      - DATABASE_PASSWORD=radency
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    container_name: postgres_db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=radency
+      - POSTGRES_PASSWORD=radency
+      - POSTGRES_DB=radency
+    restart: always
